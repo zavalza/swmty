@@ -1,16 +1,5 @@
 <!DOCTYPE html>
-<!--
 
-  ¡Thanks for looking at my code! :)
-  Built by Wi-Fi, follow me on Twitter:
-    ____  ____  _                 __        ___ _____ _  
-   / __ \|  _ \(_) ___  __ _  ___ \ \      / (_)  ___(_) 
-  / / _` | | | | |/ _ \/ _` |/ _ \ \ \ /\ / /| | |_  | | 
- | | (_| | |_| | |  __/ (_| | (_) | \ V  V / | |  _| | | 
-  \ \__,_|____/|_|\___|\__, |\___/___\_/\_/  |_|_|   |_| 
-   \____/              |___/    |_____|                  
-
--->
 <html lang="es">
 <head>
     <meta charset='UTF-8'>
@@ -25,27 +14,32 @@
     "text/javascript"></script>
     <script src="js/gmaps.js" type="text/javascript"></script>
     <script type="text/javascript">
-   $(document).ready(function(){
-          map = new GMaps({
-          div: '#mapa',
-		  lat:25.725608,
-          lng:-100.311267,
-          zoom:17,
-          panControl : false,
-          zoomControl : true,
-          scrollwheel: false
-          });
-
-          map.addMarker({
-            lat: 25.725608,
-            lng: -100.311267,
-            title: 'Centro de Innovación y Diseño',
-            infoWindow: {
-              content: '<p>Centro de Innovación y Diseño de de la Facultad de Arquitectura de la UANL. Se encuentra detrás de Rectoría, al lado de la Sala Polivalente. Si tienes dudas del lugar llama a: 01 (81) 8329 4160 ext.6755<\/p>'
+	function init_map() {
+                var myOptions = {
+                   div: '#mapa',
+					  zoom:17,
+					  panControl : false,
+					  zoomControl : true,
+					  scrollwheel: false,
+                    center: new google.maps.LatLng(25.725608, -100.311267),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById("mapa"), myOptions);
+                marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(25.725608, -100.311267)
+                });
+     
+		    infowindow = new google.maps.InfoWindow({
+                    content: "<b>Centro de Innovación y Diseño</b><br/><p>Facultad de Arquitectura de la UANL. Se encuentra detrás de Rectoría, al lado de la Sala Polivalente. Si tienes dudas del lugar llama a: 01 (81) 8329 4160 ext.6755<\/p>"
+                });
+		 google.maps.event.addListener(marker, "click", function () {
+                    infowindow.open(map, marker);
+                });
+                infowindow.open(map, marker);
             }
-           });
-		  map.showInfoWindow();
-        }); 
+            google.maps.event.addDomListener(window, "load", init_map);
+
     </script>
     <!--Add Bootstrap CSS-->
     <link href=
@@ -111,17 +105,16 @@
 			<section class="agenda schedule schedule-with-text">
 				<div class="container">
 						  <h2>Agenda</h2>
-                <h3>Así manejamos el tiempo</h3>
 					<div class="row">
 						
 						
 						<div class="col-md-4 col-sm-6">
-							<h2>Viernes 8</h2>
+							<h3>Viernes 8 Mayo</h3>
 							<ul class="schedule-overview">
 								<li>
 									<div class="schedule-title">
-										<span class="time">12:00</span>
-										<span class="title">P: Print the Legend</span>
+										<span class="time">6:30 pm</span>
+										<span class="title">Registro</span>
 									</div>
 									
 									<div class="schedule-text">
@@ -139,8 +132,8 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">14:00</span>
-										<span class="title">C: Lizbeth Villarreal</span>
+										<span class="time">7:00 pm</span>
+										<span class="title">Cena y Networking</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -158,8 +151,8 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">14:40</span>
-										<span class="title">C: LaCanchita</span>
+										<span class="time">7:30 pm</span>
+										<span class="title">Bienvenida</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -177,8 +170,8 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">15:20</span>
-										<span class="title">C: Mireya Huerta</span>
+										<span class="time">8:00 pm</span>
+										<span class="title">Pitches</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -195,8 +188,26 @@
 								</li><!--end of individual schedule item-->
 								<li>
 									<div class="schedule-title">
-										<span class="time">16:00</span>
-										<span class="title">Taller: Hablobajito</span>
+										<span class="time">9:00 pm</span>
+										<span class="title">Votación y Formación de Equipos</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+																<li>
+									<div class="schedule-title">
+										<span class="time">9:30 pm</span>
+										<span class="title">Comienza a trabajar</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -214,12 +225,12 @@
 							</ul>
 						</div>
 						<div class="col-md-4 col-sm-6">
-							<h2>Sábado 9</h2>
+							<h3>Sábado 9 Mayo</h3>
 							<ul class="schedule-overview">
 								<li>
 									<div class="schedule-title">
-										<span class="time">12:00</span>
-										<span class="title">P: Objectified</span>
+										<span class="time">9:00 am</span>
+										<span class="title">Desayuno y plática</span>
 									</div>
 									
 									<div class="schedule-text">
@@ -237,8 +248,8 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">14:00</span>
-										<span class="title">C: Casah</span>
+										<span class="time">10:00 am</span>
+										<span class="title">Sigue trabajando</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -256,8 +267,8 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">14:40</span>
-										<span class="title">C: Eldelentes</span>
+										<span class="time">1:00 p.m.</span>
+										<span class="title">Comida y plática</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -275,8 +286,8 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">15:20</span>
-										<span class="title">C: Bty Mtz Gspr</span>
+										<span class="time">2:00 pm</span>
+										<span class="title">Vuelve al trabajo, escoge tus mentores</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -293,8 +304,8 @@
 								</li><!--end of individual schedule item-->
 								<li>
 									<div class="schedule-title">
-										<span class="time">16:00</span>
-										<span class="title">Taller: Bty Mtz Gspr</span>
+										<span class="time">9:00 p.m.</span>
+										<span class="title">Cena</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -312,12 +323,12 @@
 							</ul>
 						</div>
 						<div class="col-md-4 col-sm-6">
-							<h2>Domingo 10</h2>
+							<h3>Domingo 10 Mayo</h3>
 							<ul class="schedule-overview">
 								<li>
 									<div class="schedule-title">
-										<span class="time">12:00</span>
-										<span class="title">P: Maker the Movie</span>
+										<span class="time">9:00 am</span>
+										<span class="title">Desayuno y plática</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -335,8 +346,8 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">14:00</span>
-										<span class="title">C: Hackerspace Mty</span>
+										<span class="time">10:00 am</span>
+										<span class="title">Trabaja, elige tus mentores del día</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -354,8 +365,8 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">14:40</span>
-										<span class="title">C: La madriguera</span>
+										<span class="time">1:00 pm</span>
+										<span class="title">Comida</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -373,8 +384,8 @@
 								
 								<li>
 									<div class="schedule-title">
-										<span class="time">15:20</span>
-										<span class="title">C: Cazapapeles</span>
+										<span class="time">2:00 pm</span>
+										<span class="title">Practica tu pitch</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -391,8 +402,26 @@
 								</li><!--end of individual schedule item-->
 								<li>
 									<div class="schedule-title">
-										<span class="time">16:00</span>
-										<span class="title">Taller: Proximamente</span>
+										<span class="time">5:00 pm</span>
+										<span class="title">Presentaciones finales</span>
+									</div>
+									
+									<!--<div class="schedule-text">
+										<p>
+											At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+										</p>
+									</div>-->
+									
+									<div class="marker-pin">
+										<div class="top"></div>
+										<div class="middle"></div>
+										<div class="bottom"></div>
+									</div>
+								</li><!--end of individual schedule item-->
+																<li>
+									<div class="schedule-title">
+										<span class="time">7:00 pm</span>
+										<span class="title">Cierre y premiación</span>
 									</div>
 									
 									<!--<div class="schedule-text">
@@ -619,11 +648,7 @@
                 <div class="col-md-3">
                     <h2>Sede.</h2>
 
-                    <h3>El área de juego</h3>
-
-                    <h4>Universidad Autónoma de Nuevo León</h4>
-
-                    <h3>Centro de Innovación y Diseño de la FARQ</h3>
+                    <h3>Centro de Innovación y Diseño. UANL</h3>
                 </div>
 
                 <div class="col-md-8 col-md-offset-1" id="mapa"></div>
