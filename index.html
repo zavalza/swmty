@@ -28,22 +28,23 @@
    $(document).ready(function(){
           map = new GMaps({
           div: '#mapa',
-          lat: 25.6515649,
-          lng: -100.28953999999999,
+		  lat:25.725608,
+          lng:-100.311267,
           zoom:17,
           panControl : false,
-          zoomControl : false,
+          zoomControl : true,
           scrollwheel: false
           });
 
           map.addMarker({
-            lat: 25.6515649,
-            lng: -100.28953999999999,
-            title: 'Tec de Monterrey',
+            lat: 25.725608,
+            lng: -100.311267,
+            title: 'Centro de Innovación y Diseño',
             infoWindow: {
-              content: '<p>El evento tendrá lugar en el Innovaction Gym, dentro del Tec de Monterrey. La seguridad de la institución te dará acceso, para esto debes de llevar una identificación oficial.<\/p>'
+              content: '<p>Centro de Innovación y Diseño de de la Facultad de Arquitectura de la UANL. Se encuentra detrás de Rectoría, al lado de la Sala Polivalente. Si tienes dudas del lugar llama a: 01 (81) 8329 4160 ext.6755<\/p>'
             }
            });
+		  map.showInfoWindow();
         }); 
     </script>
     <!--Add Bootstrap CSS-->
@@ -486,9 +487,9 @@
 
                     <h3>El área de juego</h3>
 
-                    <h4>Tec de Monterrey</h4>
+                    <h4>Universidad Autónoma de Nuevo León</h4>
 
-                    <h3>Innovaction Gym</h3>
+                    <h3>Centro de Innovación y Diseño de la FARQ</h3>
                 </div>
 
                 <div class="col-md-8 col-md-offset-1" id="mapa"></div>
