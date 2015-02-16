@@ -1,16 +1,3 @@
-/*
-
-  ¡Thanks for looking at my code! :)
-  Built by Wi-Fi, follow me on Twitter:
-    ____  ____  _                 __        ___ _____ _  
-   / __ \|  _ \(_) ___  __ _  ___ \ \      / (_)  ___(_) 
-  / / _` | | | | |/ _ \/ _` |/ _ \ \ \ /\ / /| | |_  | | 
- | | (_| | |_| | |  __/ (_| | (_) | \ V  V / | |  _| | | 
-  \ \__,_|____/|_|\___|\__, |\___/___\_/\_/  |_|_|   |_| 
-   \____/              |___/    |_____|                  
-
-*/
-
 
 @font-face {
     font-family: Sanchez;
@@ -34,18 +21,18 @@ body {
 
 /*Base code for sections*/
 
-.agenda, .mentores, .jueces, .lugar, .tickets, .patrocinadores {
+.agenda, .mentores, .jueces, .lugar, .tickets, .patrocinadores, .description, .categories {
     height: auto;
     padding: 60px 0 100px 0;
     width: 100%;
 }
 
-.agenda h2, .mentores h2, .jueces h2, .lugar h2, .tickets h2, .patrocinadores h2{
+.agenda h2, .mentores h2, .jueces h2, .lugar h2, .tickets h2, .patrocinadores h2, .description h2, .categories h2{
     font:72px "Sanchez", sans-serif;
     margin-bottom: 0;
 }
 
-.agenda h3, .mentores h3, .jueces h3, .lugar h3, .tickets h3, .patrocinadores h3 {
+.agenda h3, .mentores h3, .jueces h3, .lugar h3, .tickets h3, .patrocinadores h3 , .description h3, .categories h3{
     font:30px "Sanchez", sans-serif;
     margin-top: 0;
 }
@@ -85,7 +72,7 @@ body {
     padding: 15px 0 10px 0;
 }
 
-.agenda .row, .mentores .row, .jueces .row, .lugar .row, .tickets .row, .patrocinadores .row{
+.agenda .row, .mentores .row, .jueces .row, .lugar .row, .tickets .row, .patrocinadores .row, .description .row, .categories .row{
     margin-top: 50px;
 }
 
@@ -167,7 +154,65 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
+/*Description*/
 
+.description {background-color: #2fb5a9;}
+
+.description h2 {color: #FFF;}
+
+.description h3 {color: #3f3f3f;}
+
+.description h4 {
+    color: #181818;
+    font: 44px "Roboto", sans-serif;
+    font-weight: 100;
+    padding-top: 60px;
+}
+
+/*Categorias*/
+
+.categories{background-color: #FFF;}
+
+.categories h2 {color: #000;}
+
+.categories h3 {color: #383838;}
+
+.categories .row .col-md-3 {
+    border: solid 2px #cecece;
+    height: 300px;
+}
+
+.categories i {
+    color: #2fb5a9;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 50px;
+}
+
+.categories h4 {
+    color: #000;
+    font: 34px "Sanchez",sans-serif;
+    text-align: center;
+}
+
+.categories p {padding-top: 20px;}
+
+.categories a {
+    background-color: #2fb5a9;
+    color: #FFF;
+    display: inline-block;
+    font: 30px "Sanchez",sans-serif;
+    padding: 20px 40px;
+    margin-top: 60px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.categories a:hover {background-color: #383838;}
 
 /*Agenda*/
 
@@ -402,11 +447,11 @@ footer a:hover {
 
 @media (max-width: 685px) {
 
-    .agenda h2, .mentores h2, .jueces h2, .lugar h2, .tickets h2, .patrocinadores h2{
+    .agenda h2, .mentores h2, .jueces h2, .lugar h2, .tickets h2, .patrocinadores h2, .description h2, .categories h2{
         font-size:44px;
     }
 
-    .agenda h3, .mentores h3, .jueces h3, .lugar h3, .tickets h3, .patrocinadores h3 {
+    .agenda h3, .mentores h3, .jueces h3, .lugar h3, .tickets h3, .patrocinadores h3 , .description h3, .categories h3{
         font-size:26px;
     }
  
@@ -443,5 +488,294 @@ footer a:hover {
 
     .patrocinadores h3 {font-size: 22px;}
 }
+
+/*CSS of Santiago Villareal for MakerWeek
+/*!
+// 10. Speakers & Topics
+// --------------------------------------------------*/
+.speakers-row {
+  padding: 0px 15px;
+}
+.speaker-column {
+  padding: 0px;
+}
+.speaker {
+  position: relative;
+  overflow: hidden;
+}
+.speaker,
+.topic {
+  margin-bottom: 36px;
+}
+.speaker .hover-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+.speaker .image-holder {
+  margin-bottom: 12px;
+}
+.speaker span {
+  display: block;
+  font-size: 16px;
+}
+.speaker-name {
+  color: #333333;
+}
+.speaker .social-links {
+  width: 100%;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transform: translate3d(0px, -200px, 0px);
+  -webkit-transform: translate3d(0px, -200px, 0px);
+  -moz-transform: translate3d(0px, -200px, 0px);
+}
+.speaker .social-links a {
+  color: #fff;
+  font-size: 24px;
+  display: inline-block;
+  margin-left: 6px;
+}
+.speaker .social-links a:last-child {
+  margin-right: 0px;
+}
+.speaker .image-holder:hover .hover-state {
+  opacity: 1;
+}
+.speaker .image-holder:hover .hover-state .social-links {
+  transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+}
+.speaker-with-bio {
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+.speaker-with-bio .speaker {
+  width: 50%;
+  float: left;
+  margin-bottom: 0px;
+}
+.speaker-with-bio .speaker-description {
+  width: 50%;
+  float: left;
+  padding-left: 30px;
+}
+.speaker-description span {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+@media all and (max-width: 767px) {
+  .speaker-with-bio .speaker {
+    width: 100%;
+  }
+  .speaker-with-bio .speaker-description {
+    width: 100%;
+    padding-left: 0px;
+  }
+}
+.topics {
+  position: relative;
+  overflow: hidden;
+}
+.topics .container {
+  position: relative;
+  z-index: 2;
+}
+.topics.overlay .ruled-list li {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.topics.overlay .topic i {
+  color: #fff;
+}
+.topic h3 {
+  margin-bottom: 18px;
+}
+.topic p.lead {
+  margin-bottom: 32px;
+}
+.topic i {
+  font-size: 60px;
+  color: #e12b00;
+  display: inline-block;
+  margin-bottom: 32px;
+}
+@media all and (max-width: 767px) {
+  .topic h3 {
+    display: inline-block;
+    position: relative;
+    bottom: 18px;
+    left: 12px;
+  }
+  .topic i {
+    margin-bottom: 12px;
+  }
+}
+.ruled-list li {
+  border-top: 1px dotted rgba(0, 0, 0, 0.3);
+  padding: 12px 0px;
+  font-size: 16px;
+}
+@media all and (min-width: 321px) and (max-width: 767px) and (orientation: landscape) {
+  .speakers-row .col-sm-6 {
+    width: 50%;
+    float: left !important;
+  }
+}
+/*!
+// 11. Schedule
+// --------------------------------------------------*/
+.inline-video {
+  background: #f5f5f5;
+}
+.inline-video iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+.inline-video .btn {
+  min-width: 150px;
+  margin-top: 32px;
+  margin-right: 16px;
+}
+@media all and (max-width: 768px) {
+  .inline-video iframe {
+    height: 350px;
+    margin-top: 42px;
+  }
+}
+@media all and (max-width: 767px) {
+  .inline-video iframe {
+    height: 200px;
+    margin-top: 30px;
+  }
+  .inline-video .btn {
+    margin-top: 18px;
+  }
+}
+@media all and (min-width: 321px) and (max-width: 767px) and (orientation: landscape) {
+  .inline-video iframe {
+    height: 250px;
+  }
+}
+.embedded-video-holder p {
+  display: none;
+}
+.schedule-overview {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 36px;
+}
+.schedule-overview li {
+  padding: 24px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+.schedule-overview li:first-child .top {
+  display: none;
+}
+.schedule-overview li:last-child .bottom {
+  display: none;
+}
+.schedule-title span {
+  display: block;
+  font-size: 16px;
+}
+.schedule-title .title {
+  color: #333333;
+}
+.schedule-text {
+  max-height: 0px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  opacity: 0;
+}
+.schedule-overview li:hover {
+  background-color: #f5f5f5;
+}
+.schedule-overview li:hover .schedule-text {
+  max-height: 300px;
+  opacity: 1;
+  padding-top: 18px;
+}
+.schedule-overview li:hover .top,
+.schedule-overview li:hover .bottom,
+.schedule-overview li:hover .middle {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.schedule-overview li:hover .middle {
+  background: #333333;
+}
+.schedule-with-text .btn,
+.contained-gallery .btn {
+  margin-top: 24px;
+  margin-right: 12px;
+}
+.schedule-with-text .schedule-overview li {
+  padding-right: 48px;
+}
+@media all and (max-width: 1024px) {
+  .schedule-overview li {
+    padding-right: 48px;
+  }
+}
+@media all and (max-width: 767px) {
+  .schedule-with-text .btn,
+  .contained-gallery .btn {
+    margin-bottom: 32px;
+  }
+}
+.marker-pin {
+  position: absolute;
+  right: 32px;
+  top: 0px;
+  height: 100%;
+}
+.marker-pin .top,
+.marker-pin .bottom {
+  height: 50%;
+  width: 2px;
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+.marker-pin .top {
+  top: 0px;
+}
+.marker-pin .bottom {
+  bottom: 0px;
+}
+.marker-pin .middle {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  margin-top: -9px;
+  z-index: 2;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+/* 
 
 
