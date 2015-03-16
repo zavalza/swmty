@@ -1,5 +1,7 @@
 
-/*e4552B is default orange*/
+/*ff7000 is default orange*/
+/*FF8D33 is lighter orange*/
+/*EBFFFF is light blue */
 
 @font-face {
     font-family: Sanchez;
@@ -81,7 +83,7 @@ body {
 /*Background img*/
 
 .action {
-    /*background: url(../img/sw.png) no-repeat center center fixed;*/
+    background: url(../img/sw.png) no-repeat center center fixed;
 	background-color: #171e23;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -94,7 +96,7 @@ body {
 }
 
 .action h1 {
-    color: #e4552B;
+    color: #ff7000;
     font: 64px "Sanchez", sans-serif;
 } 
 
@@ -116,7 +118,7 @@ body {
 }
 
 .intro a {
-    background-color: #e4552B;
+    background-color: #ff7000;
     color: #000;
     display: block;
     font: 26px "Roboto", sans-serif;
@@ -127,7 +129,7 @@ body {
     width: 60%;
 }
 
-.intro a:hover {background-color: #e4552B;}
+.intro a:hover {background-color: #ff7000;}
 
 nav {
     height: auto;
@@ -153,13 +155,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e4552B;
+    color: #ff7000;
     text-decoration: none;
 }
 
 /*Description*/
 
-.description {background-color: #e4552B;}
+.description {background-color: #FF8D33;}
 
 .description h2 {color: #FFF;}
 
@@ -174,7 +176,7 @@ nav ul li a:hover {
 
 /*Categorias*/
 
-.categories{background-color: #FFF;}
+.categories{background-color: #EBFFFF;}
 
 .categories h2 {color: #000;}
 
@@ -186,7 +188,7 @@ nav ul li a:hover {
 }
 
 .categories i {
-    color: #e4552B;
+    color: #ff7000;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -203,7 +205,7 @@ nav ul li a:hover {
 .categories p {padding-top: 20px;}
 
 .categories a {
-    background-color: #e4552B;
+    background-color: #ff7000;
     color: #FFF;
     display: inline-block;
     font: 30px "Sanchez",sans-serif;
@@ -219,7 +221,7 @@ nav ul li a:hover {
 
 /*Agenda*/
 
-.agenda{background-color: #e4552B;}
+.agenda{background-color: #FF8D33;}
 
 .agenda h2 {color: #FFF;}
 
@@ -231,7 +233,7 @@ table {
 }
 
 th:first-child {
-    background-color: #e4552B;
+    background-color: #FF8D33;
     color: #FFF;
     font-size: 14px;
     text-align: center;
@@ -256,13 +258,13 @@ tr td:first-child {
     color: #FFF;
 }
 
-.mentor img{border: solid 5px #e4552B;}
+.mentor img{border: solid 5px #ff7000;}
 
 .mentores h2 {color: #000;}
 
 .mentores h3 {color: #383838;}
 
-.mentor a {color: #e4552B;}
+.mentor a {color: #ff7000;}
 
 /*Jueces*/
 
@@ -273,7 +275,7 @@ tr td:first-child {
 
 .jueces {background-color: #2b2a2a;}
 
-.jueces h2 {color: #e4552B;}
+.jueces h2 {color: #ff7000;}
 
 .jueces h3 {color: #FFF;}
 
@@ -283,15 +285,15 @@ tr td:first-child {
     color: #000;
 }
 
-.juez img {border: solid 5px #e4552B;}
+.juez img {border: solid 5px #ff7000;}
 
 .juez:hover img {border: solid 5px #383838;}
 
-.juez a {color: #e4552B;}
+.juez a {color: #ff7000;}
 
 /*Lugar*/
 
-.lugar {background-color: #e4552B;}
+.lugar {background-color: #FF8D33;}
 
 .lugar h2 {color: #FFF;}
 
@@ -306,7 +308,7 @@ tr td:first-child {
 
 /*Tickets*/
 
-.tickets {background-color: #FFF;}
+.tickets {background-color: #EBFFFF;}
 
 .tickets h2 {color: #000;}
 
@@ -319,7 +321,7 @@ tr td:first-child {
 }
 
 .tickets i {
-    color: #e4552B;
+    color: #ff7000;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -336,7 +338,7 @@ tr td:first-child {
 .tickets p {padding-top: 20px;}
 
 .tickets a {
-    background-color: #e4552B;
+    background-color: #ff7000;
     color: #FFF;
     display: inline-block;
     font: 30px "Sanchez",sans-serif;
@@ -354,7 +356,7 @@ tr td:first-child {
 
 .patrocinadores { background-color: #2b2a2a;}
 
-.patrocinadores h2 {color: #e4552B;}
+.patrocinadores h2 {color: #ff7000;}
 
 .patrocinadores h3 {color: #FFF;}
 
