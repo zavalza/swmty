@@ -354,15 +354,15 @@ tr td:first-child {
 
 /*Patrocinadores*/
 
-.patrocinadores { background-color: #2b2a2a;}
+.patrocinadores{background-color: #EBFFFF;}
 
-.patrocinadores h2 {color: #ff7000;}
+.patrocinadores h2 {color: #000;}
 
-.patrocinadores h3 {color: #FFF;}
+.patrocinadores h3 {color: #383838;}
 
 .patrocinadores img {width: 100%;}
 
-.patrocinadores .col-md-2 {padding-top: 40px;}
+.patrocinadores .col-md-3 {padding-top: 40px;}
 
 
 footer {
