@@ -27,7 +27,7 @@ function addListener(element, type, callback) {
 
 
 
-$(document).ready(function () {
+/*$(document).ready(function () {
 
 
    $(function() { //When the document loads
@@ -79,3 +79,4 @@ $(document).ready(function () {
 .animate({top:"+=20px"},900).animate({top:"-=20px"},900).animate({top:"+=20px"},900);
 
 });
+/*
