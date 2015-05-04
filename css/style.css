@@ -60,12 +60,7 @@ body {
     width: 140px;
 }
 
-
 .mentor:hover img, .juez:hover img {
-    -moz-transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    -o-transform: scale(1.03);
-    transform: scale(1.03);
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
 }
@@ -73,7 +68,11 @@ body {
 .mentor h4, .juez h4 {
     font:20px bold "Roboto", sans-serif;
     text-align: center;
-    padding: 15px 0 10px 0;
+    padding: 15px 0 5px 0;
+}
+
+.mentor p, .juez p{
+    text-align: center;
 }
 
 .agenda .row, .mentores .row, .jueces .row, .lugar .row, .tickets .row, .patrocinadores .row, .description .row, .categories .row{
@@ -362,7 +361,7 @@ tr td:first-child {
 
 .patrocinadores img {width: 100%;}
 
-.patrocinadores .col-md-3 {padding-top: 40px;}
+.patrocinadores .col-md-3, .patrocinadores .col-md-4 {padding-top: 40px; height: 200px; text-align: center;}
 
 
 footer {
