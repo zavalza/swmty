@@ -23,6 +23,11 @@ body {
     overflow-x: hidden;
 }
 
+.bootcamp-iframe{
+  width: 100%;
+  height: 500px;
+}
+
 /*Base code for sections*/
 
 .agenda, .mentores, .jueces, .lugar, .tickets, .patrocinadores, .description, .categories {
